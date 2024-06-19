@@ -38,7 +38,7 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={`http://localhost:1337${url}`}
+          src={`https://vinuarts.com${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
@@ -80,7 +80,7 @@ const Item = ({ item, width }) => {
                     count: count,
                     size: item.attributes.size,
                     details: details,
-                    imageUrl: `http://localhost:1337${url}`,
+                    imageUrl: `https://vinuarts.com${url}`,
                   })
                 );
               }}
