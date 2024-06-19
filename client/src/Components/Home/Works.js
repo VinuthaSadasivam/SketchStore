@@ -22,7 +22,7 @@ const Works = () => {
   async function getItems() {
     try {
       const response = await fetch(
-        "http://localhost:1337/api/items?populate=image",
+        "https://vinuarts.com/api/items?populate=image",
         { method: "GET" }
       );
 
