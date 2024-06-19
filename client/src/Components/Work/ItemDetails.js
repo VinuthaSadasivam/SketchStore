@@ -26,7 +26,7 @@ const ItemDetails = () => {
   async function getItem() {
     try {
       const item = await fetch(
-        `http://localhost:1337/api/items/${itemId}?populate=image`,
+        `https://vinuarts.com/api/items/${itemId}?populate=image`,
         { method: "GET" }
       );
       const itemJson = await item.json();
@@ -40,7 +40,7 @@ const ItemDetails = () => {
   async function getItems() {
     try {
       const items = await fetch(
-        `http://localhost:1337/api/items?populate=image`,
+        `https://vinuarts.com/api/items?populate=image`,
         {
           method: "GET",
         }
@@ -68,7 +68,7 @@ const ItemDetails = () => {
               alt={item?.attributes?.name}
               width="100%"
               height="100%"
-              src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+              src={`https://vinuarts.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
               style={{ objectFit: "contain" }}
             />
           )}
@@ -123,7 +123,7 @@ const ItemDetails = () => {
               }}
               onClick={() => {
                 if (item && item.attributes && item.attributes.price) {
-                  const imageUrl = `http://localhost:1337${item.attributes.image.data.attributes.formats.medium.url}`;
+                  const imageUrl = `https://vinuarts.com${item.attributes.image.data.attributes.formats.medium.url}`;
                   const details = item.attributes.details.map(
                     (paragraph) => paragraph.children[0].text
                   ); // Convert short description array to string
